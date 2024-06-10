@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 사이트</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #87CEEB; /* 하늘색 배경 */
+        }
+        .quiz-container {
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            padding: 20px;
+            max-width: 500px;
+            width: 100%;
+            text-align: center; /* 중간 정렬 */
+        }
+        .question {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+        .image {
+            width: 400px;
+            height: 400px;
+            margin: 20px auto; /* 이미지 중간 정렬 */
+            display: block;
+        }
+        .answer-input {
+            width: calc(100% - 22px);
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .submit-btn {
+            background: #007bff;
+            color: white;
+            border: none;
+            border-radius: 5px;
+            padding: 10px;
+            cursor: pointer;
+            width: 100%;
+        }
+        .submit-btn:hover {
+            background: #0056b3;
+        }
+        .feedback {
+            font-size: 18px;
+            color: red;
+            margin-top: 10px;
+        }
+        /* 추가된 스타일 */
+        .page2-btn {
+            position: absolute;
+            left: 50%;
+            transform: translateX(-50%);
+            bottom: 50px; /* 아래에서 50px의 간격 */
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: none; /* 초기에는 숨김 */
+            font-size: 16px;
+            margin-top: 20px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+        .quiz-complete-message {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+    <div class="quiz-container">
+        <div id="quiz">
+            <div class="quiz-complete-message" id="quiz-complete-message"></div>
+            <div class="question" id="question">질문이 여기에 표시됩니다.</div>
+            <img src="이미지 URL을 입력하세요" alt="Quiz Image" id="quiz-image" class="image" style="display:none;">
+            <input type="text" id="answer" class="answer-input" placeholder="답을 입력하세요">
+            <button class="submit-btn" onclick="submitAnswer()">제출</button>
+            <div id="feedback" class="feedback"></div>
+        </div>
+    </div>
+
+    <!-- 페이지 이동 버튼 -->
+    <div id="page2-container">
+        <button class="page2-btn" onclick="window.location.href='page2.html'">퀴즈 사이트로 이동</button>
+    </div>
+
+    <script src="flag.js"></script>
+</body>
+</html>

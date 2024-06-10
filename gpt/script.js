@@ -29,6 +29,11 @@ const quizData = [
         correct: "군인",
         image: "https://www.korea.kr/newsWeb/resources/attaches/2016.04/18/PYH2015112305980001300450.jpg"
     },
+    {
+        question: "마지막 친구 명칭은??",
+        correct: "왜소행성134340",
+        image: "https://i.pinimg.com/564x/15/17/cf/1517cf2580b202631dc062a1ae54a4d8.jpg"
+    },
 ];
 
 let currentQuiz = 0;

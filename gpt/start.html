@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>퀴즈 풀기</title>
+    <style>
+        body {
+            margin: 0;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: #D8E6E7; /* 단색 배경 */
+        }
+        .gif-container {
+            width: 100%;
+            height: 100%;
+            background-color: #D8E6E7; /* 단색 배경 */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: relative;
+        }
+        .gif {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: none;
+            position: absolute;
+            top: 0;
+            left: 0;
+        }
+        .quiz-btn {
+            z-index: 1; /* GIF 위에 버튼을 위치 */
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="gif-container">
+        <img src="https://i.pinimg.com/originals/e9/b5/c2/e9b5c218cfd045ddde3d7283663279cd.gif" alt="Quiz GIF" id="quiz-gif" class="gif">
+        <button class="quiz-btn" id="quiz-btn" onclick="location.href='index.html'">맛보기 퀴즈</button>
+    </div>
+
+    <script>
+        const quizBtn = document.getElementById('quiz-btn');
+        const quizGif = document.getElementById('quiz-gif');
+
+        quizBtn.addEventListener('mouseover', function() {
+            quizGif.style.display = 'block';
+        });
+
+        quizBtn.addEventListener('mouseout', function() {
+            quizGif.style.display = 'none';
+        });
+    </script>
+</body>
+</html>
