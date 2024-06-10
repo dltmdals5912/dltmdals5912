@@ -86,7 +86,7 @@ function submitAnswer() {
         feedbackEl.innerText = "정답입니다! 👏";
         feedbackEl.classList.add('correct');
     } else {
-        feedbackEl.innerText = `틀렸습니다. 정답은 "${currentQuizData.correct}" 입니다. 😔`;
+        feedbackEl.innerText = `"${currentQuizData.correct}" .`;
         feedbackEl.classList.remove('correct');
     }
 

@@ -1,56 +1,54 @@
-body, html {
+body {
     margin: 0;
-    padding: 0;
-    height: 100%;
-}
-
-.quiz-container {
     display: flex;
     flex-direction: column;
+    height: 100vh;
+}
+
+.video-section {
+    flex: 1;
+    overflow: hidden;
+    position: relative;
+}
+
+.video-link {
+    display: block;
     height: 100%;
-    justify-content: space-between;
+    width: 100%;
+    position: relative;
 }
 
-h1 {
-    text-align: center;
-    margin-bottom: 20px;
+.category-video {
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    transition: transform 0.5s ease, background-image 0.5s ease;
 }
 
-.category-buttons {
+.video-link:hover .category-video {
+    transform: scale(1.1);
+}
+
+.button-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     display: flex;
-    flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100%;
-}
-
-.category-buttons a {
-    text-decoration: none;
 }
 
 button {
-    width: 200px;
-    padding: 15px 0;
-    margin-bottom: 20px;
-    font-size: 1.2em;
+    padding: 10px 20px;
     border: none;
-    border-radius: 5px;
+    border-radius: 4px;
+    background-color: rgba(0, 0, 0, 0.5);
     color: white;
     cursor: pointer;
+    font-size: 1.2em;
 }
 
 button:hover {
-    opacity: 0.9;
-}
-
-.quiz-container > div:nth-child(1) {
-    background-color: #aed9e0; /* 첫 번째 섹션 배경색 */
-}
-
-.quiz-container > div:nth-child(2) {
-    background-color: #aa164a; /* 두 번째 섹션 배경색 */
-}
-
-.quiz-container > div:nth-child(3) {
-    background-color: #ffc971; /* 세 번째 섹션 배경색 */
+    background-color: rgba(0, 0, 0, 0.7);
 }
