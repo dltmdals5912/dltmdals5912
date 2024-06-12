@@ -21,7 +21,7 @@ const quizData = [
     },
     {
         question: "정답은?",
-        correct: "슈퍼카",
+        correct: "자동차",
         image: "https://i.namu.wiki/i/0U7QgewQQBmaa5c6EsbZQdbl045T-NTVylXcWoPVWNqPVNARqPOa3IwwsF0HXbqtFBRRXBBPzjBTThmiI12WLg.webp"
     },
     {
